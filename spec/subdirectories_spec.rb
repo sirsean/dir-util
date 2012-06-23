@@ -41,7 +41,7 @@ describe DirUtil do
         end
 
         it "when there are multiple levels of subdirectories" do
-            FileUtils.makedirs(File.join(@scratch, "sub1", "sub11"))
+            FileUtils.makedirs(File.join(@scratch, "sub1", "sub11", "sub111"))
             FileUtils.makedirs(File.join(@scratch, "sub1", "sub12"))
             FileUtils.makedirs(File.join(@scratch, "sub2", "sub22", "sub222"))
             FileUtils.makedirs(File.join(@scratch, "sub3"))
@@ -51,6 +51,7 @@ describe DirUtil do
                 File.join(@scratch, "sub3"),
                 File.join(@scratch, "sub1", "sub11"),
                 File.join(@scratch, "sub1", "sub12"),
+                File.join(@scratch, "sub1", "sub11", "sub111"),
                 File.join(@scratch, "sub2", "sub22"),
                 File.join(@scratch, "sub2", "sub22", "sub222"),
             ]
